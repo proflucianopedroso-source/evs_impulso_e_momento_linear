@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SD - EVS – Impulso e Força</title>
+<link rel="icon" href="EVS.png"></head>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: linear-gradient(135deg,#eef2f7,#dfe9f3);
+  color:#222;
+}
+.container{max-width:1100px;margin:auto;padding:25px;}
+.card{
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 8px 22px rgba(0,0,0,.08);
+  margin-bottom:22px;
+}
+h1{text-align:center;margin-bottom:5px;}
+.subtitle{text-align:center;opacity:.7;margin-bottom:20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
+input, textarea{
+  width:100%;padding:10px;border-radius:10px;border:1px solid #ccc;font-size:16px;
+}
+button{
+  padding:12px 22px;border:none;border-radius:12px;background:#0066ff;color:white;
+  font-size:16px;cursor:pointer;transition:.3s;
+}
+button:hover{background:#004ecc;}
+button.secondary{background:#777;}
+.result{background:#f7faff;padding:20px;border-radius:14px;margin-top:20px;}
+.question{margin-bottom:18px;}
+footer{text-align:center;margin-top:25px;opacity:.6;}
+/* Estilo para destaque da seção de energia */
+.energy-section { color: #0056b3; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Roteiro Experimental Científico – EVS</h1>
+<p class="subtitle">Análise quantitativa do impulso mecânico e força média de impacto</p>
+
+<div class="card">
+<h2>Fundamentação teórica</h2>
+<p><b>Quantidade de movimento linear:</b></p>
+<p>\[p = m\,v\]</p>
+<p>Durante um impacto ocorre variação dessa grandeza:</p>
+<p>\[I = \Delta p = m(v_f - v_0)\]</p>
+<p>O impulso também pode ser interpretado como resultado da força média no intervalo de colisão:</p>
+<p>\[I = F_{méd}\,\Delta t\]</p>
+<p>Logo:</p>
+<p>\[F_{méd} = \frac{m(v_f - v_0)}{\Delta t}\]</p>
+
+<p><b>Energia Cinética e Dissipação:</b></p>
+<p>A energia cinética inicial e final são dadas por:</p>
+<p>\[E_{ci} = \frac{1}{2}mv_0^2 \quad \text{e} \quad E_{cf} = \frac{1}{2}mv_f^2\]</p>
+<p>A energia dissipada no impacto é a diferença absoluta entre elas:</p>
+<p>\[E_{diss} = |E_{ci} - E_{cf}|\]</p>
+
+<p><b>Interpretação física:</b></p>
+<ul>
+<li>Impactos curtos produzem forças médias elevadas.</li>
+<li>Mudança de sinal da velocidade indica inversão do movimento.</li>
+<li>Esse experimento ilustra o teorema impulso–momento linear.</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>1️⃣ Inserir dados experimentais do EVS</h2>
+<div class="grid">
+<div>
+<label>Massa (g)</label>
+<input id="massa" type="text" placeholder="Ex: 150,5">
+</div>
+<div>
+<label>Velocidade inicial v₀ (m/s)</label>
+<input id="v0" type="text" placeholder="Ex: -20,5">
+</div>
+<div>
+<label>Velocidade final v_f (m/s)</label>
+<input id="vf" type="text" placeholder="Ex: 6,8">
+</div>
+<div>
+<label>Tempo de impacto (ms)</label>
+<input id="tempo" type="text" placeholder="Ex: 2,3">
+</div>
+</div>
+<br>
+<button onclick="calcular()">Calcular resultados</button>
+<button class="secondary" onclick="resetar()">Reiniciar</button>
+</div>
+
+<div id="saida" class="card" style="display:none"></div>
+
+<div class="card">
+<h2>2️⃣ Reflexão após manipular o EVS</h2>
+<p>Responda apenas depois de realizar medições no simulador.</p>
+
+<div class="question">
+1. O que acontece com a força média quando o tempo de impacto diminui?<br>
+<textarea></textarea>
+</div>
+
+<div class="question">
+2. A variação da quantidade de movimento depende mais da massa ou da velocidade? Justifique.<br>
+<textarea></textarea>
+</div>
+
+<div class="question">
+3. Por que superfícies macias reduzem forças de impacto?<br>
+<textarea></textarea>
+</div>
+
+<div class="question">
+4. O impulso pode ser nulo durante colisões? Em que situação?<br>
+<textarea></textarea>
+</div>
+
+<div class="question">
+5. Compare uma colisão elástica e inelástica no contexto do experimento.<br>
+<textarea></textarea>
+</div>
+
+<div class="question">
+6. Cite uma aplicação real onde aumentar o tempo de impacto é desejável.<br>
+<textarea></textarea>
+</div>
+</div>
+
+<footer>Experimento Virtual Simulado – EVS - &copy; LSP</footer>
+
+</div>
+
+<script>
+// Função para converter string com vírgula para float
+function parseCommaFloat(id) {
+    let val = document.getElementById(id).value.replace(',', '.');
+    return parseFloat(val);
+}
+
+// Função para formatar número de volta para vírgula
+function formatBR(num, decimals = 3) {
+    return num.toFixed(decimals).replace('.', ',');
+}
+
+function calcular(){
+let m = parseCommaFloat('massa') / 1000;
+let v0 = parseCommaFloat('v0');
+let vf = parseCommaFloat('vf');
+let t = parseCommaFloat('tempo') / 1000;
+
+if(isNaN(m)||isNaN(v0)||isNaN(vf)||isNaN(t)){
+    alert('Preencha todos os dados corretamente (use vírgula para decimais).');
+    return;
+}
+
+// Cálculos de Impulso e Força
+let dv = vf - v0;
+let I = m * dv;
+let F = I / t;
+
+// Cálculos de Energia
+let eci = 0.5 * m * Math.pow(v0, 2);
+let ecf = 0.5 * m * Math.pow(vf, 2);
+let ediss = Math.abs(eci - ecf);
+
+let html=`
+<h2>Resultados e resolução detalhada</h2>
+<div class='result'>
+<b>Conversões:</b><br>
+Massa = ${formatBR(m*1000, 2)} g = ${formatBR(m, 4)} kg<br>
+Tempo = ${formatBR(t*1000, 2)} ms = ${t.toExponential(3).replace('.',',')} s
+<hr>
+<b>Dinâmica:</b><br>
+Δv = ${formatBR(vf, 2)} − (${formatBR(v0, 2)}) = ${formatBR(dv, 2)} m/s<br>
+Impulso (I) = mΔv = <b>${formatBR(I, 3)} N·s</b><br>
+Força média (F) = I/Δt = <b>${formatBR(Math.abs(F), 1)} N</b>
+<hr>
+<div class="energy-section">
+<b>Análise de Energia:</b><br>
+Energia Cinética Inicial (Eci) = <b>${formatBR(eci, 4)} J</b><br>
+Energia Cinética Final (Ecf) = <b>${formatBR(ecf, 4)} J</b><br>
+Energia Dissipada no Impacto = <b>${formatBR(ediss, 4)} J</b>
+</div>
+</div>`;
+
+document.getElementById('saida').style.display='block';
+document.getElementById('saida').innerHTML=html;
+}
+
+function resetar(){
+document.querySelectorAll('input').forEach(i=>i.value='');
+document.getElementById('saida').style.display='none';
+}
+</script>
+
+</body>
+</html>

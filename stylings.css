@@ -1,0 +1,108 @@
+.InLabDirections{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	color:#000000;
+}
+
+#StartPuckButton{
+	position: absolute;
+	top: 500px;
+	left: 800px;
+	width: 100px;
+	height: 100px;
+}
+
+#SystemMessage{
+	position: absolute;
+	top: 15px;
+	left: 50px;
+	width: 850px;
+	height: 200px;
+}
+
+#SpaceForAnswer{
+	position: absolute;
+	top: 225px;
+	width: 725px;
+	height: 125px;
+	left: 100px;
+	background-color: #EEEEEE;
+	border: 2px solid #990000;
+	border-radius: 5px;
+	display: none;
+}
+
+
+#AnswerTitle{
+	position: absolute;
+	width: 200px;
+	top: 20px;
+	left: 0px;
+}
+
+#DirectionsforSub{
+	position: absolute;
+	width: 200px;
+	top: 70px;
+	text-align: center;
+}
+
+#FormArea{
+	position: absolute;
+	width: 325px;
+	top: 20px;
+	left: 200px;
+}
+
+.FormRow{
+	position: relative;
+	width: 325px;
+	height: 50px;
+}
+
+.TextBox{
+	position: absolute;
+	top: 0px;
+	width: 200px;
+	left: 0px;
+}
+
+.FormText{
+	position: absolute;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	color:#990000;
+	top: 0px;
+	margin-top: 5px;
+	width: 200px;
+	right: 0px;
+	text-align: right;
+}
+
+.AnswerBox{
+	position: absolute;
+	left: 205px;
+	top: 0px;
+	width: 120px;
+}
+
+.FormInputs{
+	position: relative;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	color:#990000;
+	width: 100px;
+	left: 0px;
+	height: 25px;
+	text-align: center;
+	border: black;
+	border-style: solid;
+	border-width: 3px;
+}
+
+#SubmitButton{
+	position: absolute;
+	top: 35px;
+	left: 550px;
+	width: 150px;
+}

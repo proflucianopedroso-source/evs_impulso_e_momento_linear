@@ -1,0 +1,433 @@
+
+
+/*LaLEC*/
+
+body{
+	background-color: #FFFFFF;
+	margin:0px 0px; padding:0px;
+	text-align:center;
+}
+
+/* Stuff for Navigation Menu */
+#MainNav{
+	position: relative;
+	margin-top: 15px;
+	left: 10px;
+	width: 1000px;
+	height: 20px;
+	text-align: center;
+}
+
+.NavLink{
+	display: inline-block;
+	font-size: 18px;
+	color: #990000;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	text-align: center;
+	text-decoration: none;
+	width: 75px;
+}
+
+/* Properties of the buttons to be used on page */
+
+.Button{
+	height: 45px;
+	padding-top: 5px;
+	background-color: #c0c0c0;
+	border: 2px #990000 solid;
+	border-radius: 10px;
+	text-align: center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:28px;
+	color:#990000;
+}
+
+.ButtonLittleText{
+	height: 40px;
+	padding-top: 10px;
+	background-color: #c0c0c0;
+	border: 2px #990000 solid;
+	border-radius: 10px;
+	text-align: center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:22px;
+	color:#990000;
+}
+
+.TallButton{
+	height: 65px;
+	padding-top: 10px;
+	background-color: #c0c0c0;
+	border: 2px #990000 solid;
+	border-radius: 10px;
+	text-align: center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:22px;
+	color:#990000;
+}
+
+.DarkButton{
+	height: 45px;
+	padding-top: 5px;
+	background-color: #000000;
+	border: 2px #C0C0C0 solid;
+	border-radius: 10px;
+	text-align: center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:28px;
+	color:#C0C0C0;
+}
+
+.MiniButton{
+	height: 25px;
+	padding-top: 5px;
+	background-color: #c0c0c0;
+	border: 2px #990000 solid;
+	border-radius: 5px;
+	text-align: center;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:14px;
+	color:#990000;
+}
+
+.InvisibleButton{
+
+}
+
+/* Properties of the main fonts to be used on page */
+
+.Titles{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:28px;
+	color:#990000;
+	text-align: center;
+}
+
+.Directions{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:22px;
+	color:#000000;
+	text-align: center;
+}
+
+.LittleDirections{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	color:#990000;
+	text-align: center;
+}
+
+/* Mainly used for labs for white text */
+
+.LargeWhiteText{
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:28px;
+	color:#FFFFFF;
+	text-align: center;
+}
+
+/* Properties of the FullPage Div that holds everything in your webpage */
+
+#FullPage {
+	position: relative;
+	width:1024px;
+	padding-bottom: 50px;
+	margin:0px auto; /* Right and left margin widths set to "auto" */
+}
+
+/* Properties of the MainBody Div that holds everything in your webpage */
+
+#MainBody{
+	position: relative;
+	top: 0px;
+}
+
+/* Properties of the Program Title Div that holds title of your webpage */
+
+#ProgramTitle{
+	position: relative;
+	margin-top: 15px;
+	width: 1024px;
+	height: 35px;
+	text-align: center;
+}
+
+
+/*  ************************************* */
+
+/*  This section is for the splash screen or the directions that occur before the program is actually started */
+
+/* Properties of the Overview Section Div that holds the introductory information for your program */
+
+#OverviewSection{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 925px;
+	height: 600px;
+	border: black;
+	border-style: dashed;
+	border-width: 5px;
+	display: block;
+}
+
+#LabDirections{
+	position: absolute;
+	top: 25px;
+	left: 50px;
+	width: 800px;
+}
+
+
+#PersonName{
+	position: absolute;
+	top: 250px;
+	left: 25px;
+	width: 850px;
+	text-align: center;
+}
+
+.NameInput{
+	position: relative;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	color:#990000;
+	width: 250px;
+	left: 0px;
+	height: 25px;
+	text-align: center;
+	margin-bottom: 25px;
+	border: black;
+	border-style: solid;
+	border-width: 2px;
+}
+
+#OverviewPicture{
+	position: absolute;
+	top: 375px;
+	left: 300px;
+	width: 300px;
+	height: 200px;
+	border: black;
+	border-style: solid;
+	border-width: 2px;
+}
+
+#BeginButton{
+	position: absolute;
+	top: 300px;
+	left: 375px;
+	width: 150px;
+}
+
+#AvailableLanguages{
+	position: absolute;
+	top: 375px;
+	left: 25px;
+	width: 250px;
+	height: 100px;
+}
+
+#LanguageTitle{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 250px;
+	height: 25px;
+}
+
+#LanguageDropDown{
+	position: absolute;
+	top: 40px;
+	left: 0px;
+	width: 250px;
+	height: 25px;
+	display: none;
+}
+
+/*  ************************************* */
+
+/* This is the section that contains all the stuff that is part of the actual running program */
+
+/* This ID is for entire area of the program that will display as part of the simulation */
+
+#LabSection{
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	display: none;
+}
+
+/* This ID is for part of the program that will hold the Canvas with all the drawings and animations. */
+
+#DrawingSectionOne{
+	position: absolute;
+	top: 0px;
+	width: 925px;
+	left: 50px;
+	height: 600px;
+	border: black;
+	border-style: dashed;
+	border-width: 5px;
+}
+
+#DrawingSectionTwo{
+	position: absolute;
+	top: 625px;
+	width: 925px;
+	left: 50px;
+	height: 602px;
+	border: black;
+	border-style: dashed;
+	border-width: 5px;
+}
+
+/*  ************************************* */
+
+/*  This section is for the Information about a Single Program */
+
+#BottomPart{
+	position: relative;
+	margin-top: 15px;
+	left: 0px;
+	width: 1024px;
+}
+
+#BottomPartWTopBox{
+	position: relative;
+	margin-top: 15px;
+	left: 0px;
+	width: 1030px;
+	border-top: 3px solid #000000;
+}
+
+
+#PageDescriptionText{
+	position: relative;
+	margin-top: 15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	left: 0px;
+	width: 950px;
+}
+
+#ProgramHolderBig{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 974px;
+	display: block;
+	margin: 0 auto;
+	padding: 25px;
+	border: 3px solid #000000;
+}
+
+#ProgramPictureBig{
+	position: relative;
+	margin-top: 15px;
+	left: 335px;
+	width: 300px;
+	height: 200px;
+	border: black;
+	border-style: solid;
+	border-width: 2px;
+}
+
+#DescriptionOfProgram{
+	position: relative;
+	margin-top: 25px;
+}
+
+#ResourceTitle{
+	position: relative;
+	margin-top: 25px;
+}
+
+#ResourceList{
+	position: relative;
+	margin-top: 15px;
+	left: 250px;
+	width: 500px;
+	text-align: left;
+}
+
+#ResourceList li {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:16px;
+	height: 35px;
+}
+
+/* Stuff for list of many programs like what's new page */
+
+.ProgramHolder{
+	position: relative;
+	top: 0px;
+	padding-bottom: 25px;
+	left: 0px;
+	width: 1024px;
+	height: 125px;
+	border-bottom: 3px solid #000000;
+	border-right: 3px solid #000000;
+	border-left: 3px solid #000000;
+}
+
+.ProgramLeft{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 150px;
+	width: 500px;
+	background-color: #c0c0c0;
+	border-right: 3px solid #000000;
+}
+
+.ProgramRight{
+	position: absolute;
+	top: 0px;
+	left: 510px;
+	height: 150px;
+	width: 490px;
+}
+
+.ProgramTitle{
+	position: absolute;
+	top: 0px;
+	padding-top: 16px;
+	left: 180px;
+	width: 290px;
+	height: 50px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:18px;
+	color:#990000;
+	text-align: center;
+}
+
+
+.ProgramPicture{
+	position: absolute;
+	top: 25px;
+	left: 10px;
+	width: 150px;
+	height: 100px;
+	border: 1px solid #000000;
+}
+
+.minipicture{
+	height: 100px;
+	width: 150px;
+	border: 1px solid #000000;
+}
+
+
+
+.ProgramModify{
+	position: absolute;
+	top: 110px;
+	left: 160px;
+	width: 330px;
+	height: 40px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size:16px;
+	color:#000099;
+	text-align: center;
+}

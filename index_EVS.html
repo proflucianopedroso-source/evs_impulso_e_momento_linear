@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+
+
+<head>
+	<meta charset="utf-8">
+	<! folha de estilo com elementos uniformes na maioria das páginas>
+	<link rel="stylesheet" type="text/css" href="standardstylings.css">
+
+	<! folha de estilo com elementos exclusivos para este programa>
+	<link rel="stylesheet" type="text/css" href="stylings.css">
+
+	<! carrega JQuery na memória>
+	<script src="jquery.min.js"></script>
+
+	<! carrega javascript para coisas padrão no site>
+	<script type="text/javascript" src="standardjavascript.js"></script>
+
+	<! carrega javascript exclusivo para este programa>
+	<script type="text/javascript" src="javascript.js"></script>
+
+	<title>EVS - Impulso e Momento linear</title>
+<link rel="icon" href="EVS.png"></head>
+</head>
+
+
+
+<body onload="initialize();">
+<div id="FullPage">
+	<div id = 'MainBody'>
+		<div id = "ProgramTitle" Class = "Titles">EVS - Impulso e Momento linear</div>
+		<div id = "OverviewSection" style="position: absolute; left: 50px; top: 50px; height: 367px">
+			<div id="LabDirections" Class = "Directions">
+				Neste programa você deverá determinar o impulso dado a um disco de hóquei pelas travas. O disco será lançado ao longo do gelo, baterá nas travas e quicará de volta na direção de onde veio. O disco perderá energia ao bater nas travas, mas nenhuma energia será perdida enquanto se move pelo gelo.<p/>Clique em Iniciar para começar a trabalhar no problema
+			</div>
+			<div id = "PersonName" class = "Directions"><span id = "WordName">Nome:</span> <input type="text" id = "StudentName" class = "NameInput" /></div>
+			&nbsp;<div id = "BeginButton" Class = "Button" onclick = "LoadIt()">Iniciar</div>
+		</div>
+		<div id = "LabSection">
+			<div id = "DrawingSectionOne">
+				<canvas id = "CanvasOne" width="925" height="600">
+					Seu navegador não suporta HTML 5.0 Canvas... obtenha um navegador melhor!!!
+				</canvas>
+				<div id = "SystemMessage" class = "InLabDirections">Registre a massa do disco e clique no disco para lançá-lo em direção às travas<p/>Use a distância entre as marcações (∆x) e o tempo que leva para percorrer essa distância para encontrar a velocidade do disco enquanto se move em direção às travas e depois quica de volta<p/>Finalmente, calcule o impulso aplicado ao disco usando o tempo em que esteve em contato com as travas</div>
+				<div id = "StartPuckButton" class = "InvisibleButton" onclick = "StartMotion()"></div>
+				<div id = "SpaceForAnswer">
+					<div id = "AnswerTitle" class = "Directions">Inserir Respostas</div>
+					<div id = "DirectionsforSub" class = "LittleDirections">Não inclua unidades</div>
+					<div id = "FormArea">
+						<div class = "FormRow">
+							<div class = "TextBox"><span id = "Q1" class = "FormText">Impulso (N•s):</span></div><div class = "AnswerBox"><input type="text" id = "A1" class = "FormInputs" /></div>
+						</div>
+						<div class = "FormRow">
+							<div class = "TextBox"><span id = "Q2" class = "FormText">Força (N):</span></div><div class = "AnswerBox"><input type="text" id = "A2" class = "FormInputs" /></div>
+						</div>
+					</div>
+					<div id = "SubmitButton" class = "Button" onclick = "SubmitForm()">Verificar</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+</body>
+
+</html>
